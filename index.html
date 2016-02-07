@@ -6,13 +6,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-<div class="col-md-4 col-md-offset-4">
+<div class="col-md-4 col-md-offset-4" ng-app="proyectoUno" ng-controller="ProyectoUnoController">
     <div class="page-header text-center">
         <h1>Ejemplo de Promises</h1>
     </div>
-    <p><button id="btn" class="btn btn-primary">Hazme una promesa!</button></p>
-    <pre id="log"></pre>
+    <p><button id="btn" class="btn btn-primary" ng-click="ejemploDePromesas()">¡Hazme una promesa!</button></p>
+    <pre ng-bind-html="registro"></pre>
 </div>
-<script src="js/promise.js"></script>
+<script src="js/angular.min.js"></script>
+<!-- Necesario para imprimir HTML en una directiva bind -->
+<script src="js/angular-sanitize.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
