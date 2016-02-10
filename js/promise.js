@@ -20,12 +20,21 @@ function ejemploDePromesas() {
         function(resolve, reject) {
             registro.insertAdjacentHTML('beforeend', cuentaDePromesasLocales +
                 ') Promesa empezada (<small>Código asíncrono empezado</small>)<br/>');
-            // Esto sólo es un ejemplo para crear asincronismo
-            window.setTimeout(
-                function() {
-                    // ¡Cumplimos la promesa!
-                    resolve(cuentaDePromesasLocales)
-                }, Math.random() * 2000 + 1000);
+
+            // Bandera que nos indica si nuestra operación tuvo éxito o error
+            var algunaCondicion = false;
+
+            if (algunaCondicion) {
+                // Esto sólo es un ejemplo para crear asincronismo
+                window.setTimeout(
+                    function() {
+                        // ¡Cumplimos la promesa!
+                        resolve(cuentaDePromesasLocales)
+                    }, Math.random() * 2000 + 1000);
+            } else {
+                // Rechazamos la promesa con un mensaje descriptivo
+                reject('Algun error sucedio');
+            }
         });
 
     // definimos que hacer cuando la promesa se ha cumplido.
