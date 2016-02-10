@@ -12,6 +12,8 @@
     </div>
     <p><button id="btn" class="btn btn-primary" ng-click="ejemploDePromesas()">¡Hazme una promesa!</button></p>
     <pre ng-bind-html="registro"></pre>
+    <!-- HTML crudo usado en el registro, demuestra la diferencia entre usar `ng-bind` y `ng-bind-html` -->
+    <pre>{{registro}}</pre>
 </div>
 <script src="js/angular.min.js"></script>
 <!-- Necesario para imprimir HTML en una directiva bind -->
